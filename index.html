@@ -1,0 +1,139 @@
+<html>
+
+<head>
+  <title> Deluxze </title>
+  <link href="css/estilos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg  data-bs-theme=dark" id="navbarMain">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Deluxze</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#eventos">Eventos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--carrusel-->
+  <div id="galeria" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/urbanfest.avif" class="d-block w-100" alt="Concierto 1">
+      </div>
+      <div class="carousel-item">
+        <img src="img/traphouse.avif" class="d-block w-100" alt="Concierto 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/reggaeton.avif" class="d-block w-100" alt="Concierto 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#galeria" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#galeria" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <!--tarjetas-->
+  <section class="container my-5" id="eventos">
+    <h2 class="text-center mb-4">Próximos Eventos</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card evento-card">
+          <img src="img/urbanfest.avif" width="354" height="217" class="card-img-top" alt="Evento 1">
+          <div class="card-body">
+            <h5 class="card-title"> UrbanoFest 2025</h5>
+            <p class="card-text">Temuco - 20 de Mayo</p>
+            <a href="#" class="btn btn-dark">Comprar entradas</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card evento-card">
+          <img src="img/traphouse.avif" width="354" height="217" class="card-img-top" alt="Evento 2">
+          <div class="card-body">
+            <h5 class="card-title">TrapHouse</h5>
+            <p class="card-text"> labranza - 15 de Junio</p>
+            <a href="#" class="btn btn-dark">Comprar entradas</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card evento-card">
+          <img src="img/reggaeton.avif" width="354" height="217" class="card-img-top" alt="Evento 3">
+          <div class="card-body">
+            <h5 class="card-title">ReggaetonFest</h5>
+            <p class="card-text"> Temuco - 30 de Julio</p>
+            <a href="#" class="btn btn-dark">Comprar entradas</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <hr>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Registrado Correctamente
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <button type="button" class="btn btn-primary"  onclick="completar()">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Formulario-->
+  <section class="container my-5" id="contacto">
+    <h2 class="text-center mb-4"> Registrate ahora </h2>
+
+    <form class="was-validated" id="formData">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre o Email</label>
+        <input type="text" class="form-control" id="nombre" placeholder="*****@gmail.com" required></input>
+      </div>
+
+      <div class="">
+        <label class="form-check-label" for="contrasena">contraseña</label>
+        <input type="password" class="form-control" id="contrasena" name="radio-stacked" required>
+
+      </div>
+
+      <div class="mb-3 my-3" >
+        <button class="btn btn-dark" type="submit">Enviar</button>
+      </div>
+    </form>
+  </section>
+
+  <footer class="text-center p-3 bg-dark text-white">
+    © 2025 Deluxze - Todos los derechos reservados.
+  </footer>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="js/funciones.js"></script>
+</body>
+
+</html>
